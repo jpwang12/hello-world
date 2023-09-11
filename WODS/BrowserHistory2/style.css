@@ -1,0 +1,25 @@
+h1, h2{
+    font-family: 'Oswald' sans-serif
+}
+body,p, span{
+    font-family: 'Open Sans', sans-serif;
+}
+body, h1, h2{
+    color: darkblue;
+}
+body {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+body {
+    max-width: 950px;
+}
+body {
+    background-color: Ivory;
+}
+img {
+    vertical-align: middle;
+  float: left;
+}
