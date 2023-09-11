@@ -8,12 +8,14 @@ h1, h2 {
     text-align: center;
 }
 /* block styling */  
-.main {
+main{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    background: url("./phone_globe.jpg") no-repeat 50% center;
-    color: black;
+    background-image: url("./phone_globe.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+
 }
 /* Form styling */  
 .item img {
