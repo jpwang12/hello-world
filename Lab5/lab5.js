@@ -1,8 +1,8 @@
 //declare variables per lab 5.1 instructions
 let age=53;
-let fav_num=7; //not my real fav number
-let day_of_birth=8;
-let month_of_birth=11;
+let fav_num=22; 
+let day_of_birth=5;
+let month_of_birth=9;
 
 // define calculations
 let calc1= age + fav_num / day_of_birth * month_of_birth;
