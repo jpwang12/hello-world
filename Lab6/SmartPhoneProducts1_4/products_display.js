@@ -16,6 +16,20 @@ function changeClassName(element) {
     hit_spin_span.innerHTML=Number(hits/spins).toFixed(2);
 
     let hits_spins_ratio = hits/spins;
+
+    /*  if ( hits_spins_ratio > 0 ) {
+    progress = 'On your way!';
+        if ( hits_spins_ratio >= 0.25 ) {
+            progress = 'Almost there!';
+            if ( hits_spins_ratio >= 0.5 ) {
+                if( hits < spins ) { 
+                    progress = 'You win!';
+                }
+            }
+        }
+    } else {
+        progress = 'Get going!' ;
+    } */
  
     if (hits_spins_ratio > 0) {
         if (hits_spins_ratio >= 0.5 && hits < spins) {
