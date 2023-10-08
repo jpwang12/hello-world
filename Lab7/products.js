@@ -22,6 +22,7 @@ console.log("Product variables loaded...");
 
 
 //exercise 1.1
+console.log();
 console.log("exercise 1.1");
 let num_products=5;
 let productCount=1;
@@ -32,6 +33,7 @@ while (productCount <=num_products){
 
 
 //exercise 1.2
+console.log();
 console.log("exercise 1.2");
 productCount=1;
 while(productCount <= num_products){
@@ -41,6 +43,7 @@ while(productCount <= num_products){
 
 
 //exercize 1.3
+console.log();
 console.log("exercise 1.3");
 productCount=1;
 while(productCount <= num_products/2) {
@@ -50,6 +53,7 @@ while(productCount <= num_products/2) {
 
 
 //exercise 2.1
+console.log();
 console.log("exercise 2.1");
 productCount=1;
 while (productCount <=num_products){
@@ -63,6 +67,7 @@ while (productCount <=num_products){
 
 
 //exercise 2.2
+console.log();
 console.log("exercise 2.2");
 productCount=1;
 let lowerBound=num_products*.25;
@@ -78,6 +83,7 @@ while(productCount <= num_products) {
 
 
 //exercise 2.3
+console.log();
 console.log("exercise 2.3");
 productCount=1;
 while(productCount <= num_products) {
@@ -95,6 +101,7 @@ while(productCount <= num_products) {
 
 
 //exercise 3.1a
+console.log();
 console.log("exercise 3.1a");
 productCount=1;
 for(let i=1; i<= num_products; i++){
@@ -108,13 +115,25 @@ for(let i=1; i<= num_products; i++){
 
 
 //exercise 3.1b
+console.log();
 console.log("exercise 3.1b");
-for(let i=1; eval("typeof name"+i)!='undefined'; i++){
-    if(i >= lowerBound && i<= upperBound){
-        console.log(eval('name'+ i)+' is sold out!!');
-    } else{
-        console.log(i +'. '+eval('name'+ i));
+for (let i=1; eval("typeof name"+i) != 'undefined'; i++) {
+    if (i >= lowerBound && i<= upperBound) {
+        console.log (eval('name'+i) + ' is sold out!!');
+    } else {
+        console.log(i+'. '+eval('name'+i));
     }
-    productCount++;
 }
 
+//4.2
+// Create a table header
+
+document.write('<table border="1"');
+document.write('<tr><th>Number</th><th>Item</th></tr>');
+// Loop to output rows
+for (let i=1; eval("typeof name"+i) != 'undefined'; i++) {
+    document.write(`<tr><td>${i}</td><td>${eval("name"+i)}</td></tr>`);
+}
+
+// Close the table
+document.write('</table>');
