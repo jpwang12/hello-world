@@ -1,15 +1,14 @@
-function updateQuantityMessage(textbox) {
-    let quantityMessage = document.getElementById('qty_textbox_message');
+function formSubmission() {
+    let quantity = Number(document.querySelector('input[name="qty_textbox"]').value);
 
-    //validate the quantity entered
-    let validationMessage = validateQuantity(Number(textbox.value));
+    let validationMessage = validateQuantity(quantity);
 
-    //if there are validation errors, display error message
-    if (validationMessage !=="") {
-        quantityMessage.innerHTML = validationMessage;
+    if (validationMessage!=="") {
+        document.getElementById("invalidQuantity").innerHTML = validationMessage;
     } else {
-        quantityMessage.innerHTML = textbox.value;
+       window.location.href = `display_purchase.html?qty_textbox=${quantity}`
     }
+    return false; 
 }
 
 function validateQuantity(quantity) {
@@ -19,10 +18,10 @@ function validateQuantity(quantity) {
         case isNaN(quantity):
             errorMessage = "Not a number. Please enter a non-negative quantity to order.";
             break;
-        case quantity < 0 && !Number.isInteger(quantity):
+        case quantity <= 0 && !Number.isInteger(quantity):
             errorMessage = "Negative inventory and not an Integer. Please enter a non-negative quantity to order.";
             break;
-        case quantity < 0:
+        case quantity <= 0:
             errorMessage = "Negative inventory. Please enter a non-negative quantity to order.";
             break;
         case !Number.isInteger(quantity):
@@ -32,7 +31,5 @@ function validateQuantity(quantity) {
             errorMessage = ""; // No errors
             break;
     }
-    
     return errorMessage;
-
 }
